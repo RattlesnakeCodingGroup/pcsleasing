@@ -78,10 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pcsleasing',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'Rock2Fakie',
+        'PASSWORD': 'rocktofakie',
     }
 }
 
@@ -125,5 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR,'static')
-MEDIA_ROOT= os.path.join(PROJECT_DIR, 'media')
+# MEDIA_ROOT= os.path.join(PROJECT_DIR, 'media')
 
