@@ -13,7 +13,7 @@ class Agents(models.Model):
     agency = models.CharField(max_length= 100)
     email = models.CharField(max_length= 100)
     contact = models.CharField(max_length= 100)
-    phone = PhoneField(blank = False)
+    phone = models.CharField(max_length= 100, blank = False)
     message = models.CharField(max_length= 100)
     resume = models.FileField()
 
