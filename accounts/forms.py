@@ -4,6 +4,11 @@ from accounts.models import Contact, Agents, Quote
 
 
 class ContactForm(forms.ModelForm):
+    name = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Name'}))
+    email = forms.EmailField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+    phone = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
+    inquiry = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Message'}))
+
     class Meta:
         model = Contact
         fields = '__all__'
