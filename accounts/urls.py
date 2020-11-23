@@ -10,5 +10,6 @@ urlpatterns = [
     path('Agents/', views.Agents.as_view(), name="agents"),
     path('Quote/', views.Quote.as_view(), name='quote'),
     path('ContactUs/', views.Contact.as_view(), name='contact'),
+    path('whypeo/', views.WhyPeo.as_view(), name= 'whypeo')
 
 ]

@@ -23,6 +23,10 @@ class Services(View):
     def get(self, request):
         return render(request, 'services.html')
 
+class WhyPeo(View):
+    def get(self, request):
+        return render(request, 'whypeo.html')
+
 
 class Agents(View):
     def get(self, request):
