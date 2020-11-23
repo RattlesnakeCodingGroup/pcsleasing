@@ -2,14 +2,44 @@
 {% load crispy_forms_tags%}
 {% block content %}
 <div class="container">
-<title>Fill Inquiry Below</title>
-        <form method = "POST">
-            {% csrf_token %}
-            <div class="form-group">
-                {{form|crispy}}
-            <button class="btn btn-success" type="submit" name = "button">Submit</button>
-            </div>
-        </form>
+<title>Apply to be an Agent!</title>
+        <form method="POST"  >
+                    {% csrf_token %}
+{#                    <div class="row align-items-stretch mb-5">#}
+{#                        <div class="col-md-6">#}
+                            <div class="form-group">
+                                {{ form.agency }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                             <div class="form-group">
+                                {{ form.contact }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                             <div class="form-group">
+                                {{ form.resume }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                {{ form.email}}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                {{ form.phone }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+                            <div class="form-group form-group-textarea mb-md-0">
+                                {{ form.message}}
+                                <p class="help-block text-danger"></p>
+                            </div>
+{#                        </div>#}
+{#                    </div>#}
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">CONTACT US</button>
+                    </div>
+                </form>
         <br>
 
 

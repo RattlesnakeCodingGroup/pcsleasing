@@ -134,9 +134,9 @@ class Contact(View):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            name = form.cleaned_data['contact_person']
+            name = form.cleaned_data['name']
             phone = form.cleaned_data['phone']
-            message = form.cleaned_data['company_name']
+            message = form.cleaned_data['inquiry']
             email = form.cleaned_data['email']
 
 
