@@ -13,10 +13,10 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = '__all__'
         labels = {
-            'name': "Name",
-            'email': "Email",
-            'inquiry': "Message",
-            'phone': 'Phone Number'
+            # 'name': "Name",
+            # 'email': "Email",
+            # 'inquiry': "Message",
+            # 'phone': 'Phone Number'
         }
 
 

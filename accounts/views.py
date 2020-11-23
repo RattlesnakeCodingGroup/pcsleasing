@@ -31,8 +31,8 @@ class Index(View):
                      + 'email: ' + str(email) + '\n'
                      + 'phonenumber: ' + str(phone) + '\n'
                 ,
-                from_email='jhaverihussain@gmail.com',
-                to=[]
+                from_email='pcsleasing@gmail.com',
+                to=['pcsleasing@gmail.com']
 
             )
             email.send()
@@ -78,8 +78,8 @@ class Agents(View):
                         + 'contact: '+ str(contact)+ '\n'
                         + 'phonenumber: '+ str(phone)+ '\n'
                 ,
-                from_email= 'jhaverihussain@gmail.com' ,
-                to=[]
+                from_email= 'pcsleasing@gmail.com',
+                to=['pcsleasing@gmail.com']
 
 
             )
@@ -116,8 +116,8 @@ class Quote(View):
                      + 'Number of Employees: ' + str(num_employee) + '\n'
                      + 'Contact Person: ' + str(contactperson) + '\n'
                 ,
-                from_email='jhaverihussain@gmail.com',
-                to=[]
+                from_email='pcsleasing@gmail.com',
+                to=['pcsleasing@gmail.com']
 
             )
             email.send()
@@ -147,8 +147,8 @@ class Contact(View):
                         + 'email: '+ str(email)+ '\n'
                         + 'phonenumber: '+ str(phone)+ '\n'
                 ,
-                from_email='jhaverihussain@gmail.com',
-                to=[]
+                from_email='pcsleasing@gmail.com',
+                to=['pcsleasing@gmail.com']
 
             )
             email.send()
