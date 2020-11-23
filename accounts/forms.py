@@ -21,17 +21,23 @@ class ContactForm(forms.ModelForm):
 
 
 class AgentForm(forms.ModelForm):
+    agency = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Agency Name'}))
+    email = forms.EmailField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+    contact = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Contact'}))
+    phone = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
+    message = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Message'}))
+    resume = forms.FileField(label=' ', widget=forms.FileInput(attrs={'placeholder': 'Resume'}))
     class Meta:
         model = Agents
-        fields = '__all__'
         labels = {
-            'name': "Name",
-            'email': "Email",
-            'message': "Message",
-            'phone': 'Phone Number',
-            'agency': "Agency Name",
-            'resume': 'Resume'
+            # 'name': "Name",
+            # 'email': "Email",
+            # 'message': "Message",
+            # 'phone': 'Phone Number',
+            # 'agency': "Agency Name",
+            # 'resume': 'Resume'
         }
+        fields = ('__all__')
 class QuoteForm(forms.ModelForm):
     class Meta:
         model= Quote

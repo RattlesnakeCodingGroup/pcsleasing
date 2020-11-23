@@ -15,7 +15,7 @@ class Agents(models.Model):
     contact = models.CharField(max_length= 100)
     phone = models.CharField(max_length= 100, blank = False)
     message = models.CharField(max_length= 100)
-    resume = models.FileField()
+    resume = models.FileField(upload_to='media/')
 
 class Quote(models.Model):
     contact_person= models.CharField(max_length= 100)

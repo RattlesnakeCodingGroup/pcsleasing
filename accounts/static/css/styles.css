@@ -573,6 +573,11 @@ pre code {
     max-width: 1140px;
   }
 }
+
+.asteriskField {
+    display: none;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

@@ -19,9 +19,9 @@ class Index(View):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            name = form.cleaned_data['contact_person']
+            name = form.cleaned_data['name']
             phone = form.cleaned_data['phone']
-            message = form.cleaned_data['company_name']
+            message = form.cleaned_data['inquiry']
             email = form.cleaned_data['email']
 
             email = EmailMessage(
@@ -65,7 +65,7 @@ class Agents(View):
         if form.is_valid():
             form.save()
             message= form.cleaned_data['message']
-            resume= form.cleaned_data['resume']
+            resume = request.FILES['resume']  # file is the name value which you have provided in form for file field
             phone = form.cleaned_data['phone']
             contact = form.cleaned_data['contact']
             agency = form.cleaned_data['agency']
@@ -134,9 +134,9 @@ class Contact(View):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            name = form.cleaned_data['contact_person']
+            name = form.cleaned_data['name']
             phone = form.cleaned_data['phone']
-            message = form.cleaned_data['company_name']
+            message = form.cleaned_data['inquiry']
             email = form.cleaned_data['email']
 
 

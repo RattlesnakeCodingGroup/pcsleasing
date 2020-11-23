@@ -2,27 +2,29 @@
 {% load crispy_forms_tags%}
 {% block content %}
 <div class="container">
-<h1>Fill Inquiry Below</h1>
+<br>
+<h2>Contact Us</h2>
+    <br>
        <form method="POST"  >
                     {% csrf_token %}
 {#                    <div class="row align-items-stretch mb-5">#}
 {#                        <div class="col-md-6">#}
                             <div class="form-group">
-                                {{ form.name }}
+                                {{ form.name|as_crispy_field }}
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                {{ form.email}}
+                                {{ form.email|as_crispy_field}}
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                {{ form.phone }}
+                                {{ form.phone|as_crispy_field }}
                                 <p class="help-block text-danger"></p>
                             </div>
 {#                        </div>#}
 {#                        <div class="col-md-6">#}
                             <div class="form-group form-group-textarea mb-md-0">
-                                {{ form.inquiry}}
+                                {{ form.inquiry|as_crispy_field}}
                                 <p class="help-block text-danger"></p>
                             </div>
 {#                        </div>#}
