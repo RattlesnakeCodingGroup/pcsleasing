@@ -157,24 +157,25 @@
                 </div>
                 <form method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
                     {% csrf_token %}
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
+                    <div class="row align-items-stretch mb-12">
+                        <div class=" col-md-6">
                             <div class="form-group">
-                                {{ form.name| as_crispy_field }}
+
+                                {{ form.name|as_crispy_field }}
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                {{ form.email| as_crispy_field }}
+                                {{ form.email|as_crispy_field }}
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                {{ form.phone| as_crispy_field }}
+                                {{ form.phone|as_crispy_field }}
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                {{ form.inquiry| as_crispy_field }}
+                                {{ form.inquiry|as_crispy_field }}
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -183,6 +184,7 @@
                         <div id="success"></div>
                         <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">CONTACT US</button>
                     </div>
+
                 </form>
             </div>
         </section>

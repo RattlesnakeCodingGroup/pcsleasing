@@ -11,13 +11,13 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = Contact
-        fields = '__all__'
         labels = {
             # 'name': "Name",
             # 'email': "Email",
             # 'inquiry': "Message",
             # 'phone': 'Phone Number'
         }
+        fields = ('__all__')
 
 
 class AgentForm(forms.ModelForm):
