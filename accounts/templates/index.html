@@ -22,6 +22,13 @@
 
     </style>
     <body id="page-top">
+        {% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+        {% endif %}
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
@@ -44,6 +51,7 @@
             </div>
         </nav>
 
+            {% block masthead %}
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
@@ -52,6 +60,8 @@
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
             </div>
         </header>
+
+                {% endblock %}
                 {% block content %}
                     <!-- Services-->
         <section class="page-section" id="services">

@@ -1,7 +1,9 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.shortcuts import render, redirect, render_to_response
 
 # Create your views here.
+from django.template import RequestContext
 from django.urls import reverse
 from django.views import View
 from django.core.mail import EmailMessage
@@ -49,43 +51,79 @@ class Services(View):
     def get(self, request):
         return render(request, 'services.html')
 
+
 class WhyPeo(View):
     def get(self, request):
         return render(request, 'whypeo.html')
 
 
-class Agents(View):
-    def get(self, request):
-        form = AgentForm()
-        context = {'form': form}
-        return render(request, 'agents.html', context)
+# class Agents(View):
+#     def get(self, request):
+#         form = AgentForm()
+#         context = {'form': form}
+#         return render(request, 'agents.html', context)
+#
+#     def post(self, request, *args, **kwargs):
+#         form = AgentForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             message= form.cleaned_data['message']
+#             resume = request.FILES['resume']  # file is the name value which you have provided in form for file field
+#             phone = form.cleaned_data['phone']
+#             contact = form.cleaned_data['contact']
+#             agency = form.cleaned_data['agency']
+#             email = form.cleaned_data['email']
+#
+#             email= EmailMessage(
+#                 subject= 'Agent application from '+ str(email) ,
+#                 body= 'Agency Name: '+ str(agency)+ '\n'
+#                         + 'message: '+str(message)+ '\n'
+#                         + 'contact: '+ str(contact)+ '\n'
+#                         + 'phonenumber: '+ str(phone)+ '\n'
+#                 ,
+#                 from_email= 'pcsleasing@gmail.com',
+#                 to=['pcsleasing@gmail.com']
+#
+#
+#             )
+#             if request.FILES:
+#                 uploaded_file = request.FILES['resume']  # file is the name value which you have provided in form for file field
+#                 email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
+#             email.send()
+#         return redirect(reverse('accounts:index'))
 
-    def post(self, request, *args, **kwargs):
-        form = AgentForm(request.POST)
+
+def agents(request):
+    if request.method == 'POST':
+        form = AgentForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            message= form.cleaned_data['message']
-            resume = request.FILES['resume']  # file is the name value which you have provided in form for file field
+            message = form.cleaned_data['message']
+            #             resume = request.FILES['resume']  # file is the name value which you have provided in form for file field
             phone = form.cleaned_data['phone']
             contact = form.cleaned_data['contact']
             agency = form.cleaned_data['agency']
             email = form.cleaned_data['email']
-
-            email= EmailMessage(
-                subject= 'Agent application from '+ str(email) ,
-                body= 'Agency Name: '+ str(agency)+ '\n'
-                        + 'message: '+str(message)+ '\n'
-                        + 'contact: '+ str(contact)+ '\n'
-                        + 'phonenumber: '+ str(phone)+ '\n'
+            uploaded_file = request.FILES['resume']  # file is the name value which you have provided in form for file field
+            email = EmailMessage(
+                subject='Agent application from ' + str(email),
+                body='Agency Name: ' + str(agency) + '\n'
+                     + 'message: ' + str(message) + '\n'
+                     + 'contact: ' + str(contact) + '\n'
+                     + 'phone number: ' + str(phone) + '\n'
                 ,
-                from_email= 'pcsleasing@gmail.com',
+                from_email='pcsleasing@gmail.com',
                 to=['pcsleasing@gmail.com']
 
-
             )
-            email.attach_file(resume)
+
+            email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
             email.send()
-        return redirect(reverse('accounts:index'))
+            messages.success(request, "Inquiry Sent")
+            return redirect('accounts:index')
+    else:
+        form = AgentForm()
+    context = {'form': form}
+    return render(request, 'agents.html', context)
 
 
 class Quote(View):
@@ -103,9 +141,8 @@ class Quote(View):
             company_name = form.cleaned_data['company_name']
             num_employee = form.cleaned_data['num_employee']
             email = form.cleaned_data['email']
-            operations= form.cleaned_data['operations']
+            operations = form.cleaned_data['operations']
             payroll = form.cleaned_data['payroll']
-
 
             email = EmailMessage(
                 subject='requested quote from ' + str(email),
@@ -139,13 +176,12 @@ class Contact(View):
             message = form.cleaned_data['inquiry']
             email = form.cleaned_data['email']
 
-
             email = EmailMessage(
                 subject='Inquiry from ' + str(email),
-                body='Name: '+ str(name)+ '\n'
-                        + 'message: '+str(message)+ '\n'
-                        + 'email: '+ str(email)+ '\n'
-                        + 'phonenumber: '+ str(phone)+ '\n'
+                body='Name: ' + str(name) + '\n'
+                     + 'message: ' + str(message) + '\n'
+                     + 'email: ' + str(email) + '\n'
+                     + 'phonenumber: ' + str(phone) + '\n'
                 ,
                 from_email='pcsleasing@gmail.com',
                 to=['pcsleasing@gmail.com']
