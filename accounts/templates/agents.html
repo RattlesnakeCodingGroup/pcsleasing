@@ -6,14 +6,13 @@
 
 {% endblock %}
 {% block content %}
+<section class="page-section">
     <br>
     <br>
-    <br>
-    <br>
-     <div class="divider-custom divider-dark">
-        <div class="divider-custom-line"></div>
-        <div class="text-center"><h2>Agents</h2></div>
-        <div class="divider-custom-line"></div>
+     <div class="divider-custom1 divider-dark1">
+        <div class="divider-custom-line1"></div>
+        <div class="text-center "><h2 >Agents</h2></div>
+        <div class="divider-custom-line1"></div>
     </div>
     <br>
     <br>
@@ -78,10 +77,14 @@
     <br>
     <br>
     <br>
+</section>
+
+
+<section class="page-section bg-blue" >
     <div class="container">
     <div class="divider-custom divider-dark">
         <div class="divider-custom-line"></div>
-        <div class="text-center"><h2>Fill Inquiry Below</h2></div>
+        <div class="text-center text-white"><h2>Fill Inquiry Below</h2></div>
         <div class="divider-custom-line"></div>
     </div>
 
@@ -95,19 +98,19 @@
                 {{ form.contact|as_crispy_field}}
                 {{ form.phone|as_crispy_field }}
                 {{ form.message|as_crispy_field }}
-                 Upload Resume:
-                <br>
-                <input type="file"  name="resume"/>
-                <p class="help-block text-danger"></p>
+                <p class="text-white">Upload Resume:</p>
+                <input class="text-white" type="file"  name="resume"/>
+                <p class="help-block text-white"></p>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Submit</button>
+                <button class="btn btn-light btn-xl text-uppercase" id="sendMessageButton" type="submit">Submit</button>
             </div>
         </form>
         <br>
 
 
 </div>
+    </section>
 
  <style>
         .column {

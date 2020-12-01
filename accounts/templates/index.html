@@ -30,20 +30,19 @@
 
         {% endif %}
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <nav class="navbar  navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{% static 'assets/img/navbar-logo.png'%}" alt="" /></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand js-scroll-trigger" href="{% url 'accounts:index' %}"><img src="{% static 'assets/img/navbarnew.png'%}" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
                     Menu
                     <i class="fas fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:index' %}">Home</a></li>
+
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:whypeo' %}">Why PEO</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:services' %}">Services</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:agents' %}">Agents</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:about' %}">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:contact' %}">Contact</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'accounts:quote' %}">Quote</a></li>
                     </ul>
@@ -57,14 +56,14 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To PCS Leasing!</div>
                 <div class="masthead-heading text-uppercase">Striving to make Workers Comp simple!</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'accounts:services'  %}">Tell Me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a>
             </div>
         </header>
 
                 {% endblock %}
                 {% block content %}
                     <!-- Services-->
-        <section class="page-section" id="services">
+        <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About Us</h2><br>
@@ -163,7 +162,7 @@
             </div>
         </div>
         <!-- Contact-->
-        <section class="page-section" id="contact">
+        <section class="page-section bg-blue" id="contact">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
