@@ -1,10 +1,79 @@
 {% extends 'index.html' %}
+{% load static %}
 {% load crispy_forms_tags%}
 
 {% block masthead %}
 
 {% endblock %}
 {% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+     <div class="divider-custom divider-dark">
+        <div class="divider-custom-line"></div>
+        <div class="text-center"><h2>Agents</h2></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+{#left column#}
+    <div class="row">
+    <div class="column "></div>
+
+    <div class="left">
+    <h2 class="text-center masthead-heading"> Solution for your Hard to Place Risks </h2>
+        <br>
+
+    <div class="text-center masthead-subheading"> Communication is King. </div>
+        <br>
+    <div class="text-center masthead-subheading">We pride ourselves on delivering stellar timely options for our referring
+                                    partners.</div>
+        <br>
+    <div class="text-center masthead-subheading"> We enjoy surpassing expectations and building long term
+                        lasting relationships. </div>
+        <div >
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+        <img    src="{% static 'assets/img/agents/trend.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+</div>
+
+
+{#   right col #}
+
+    <div class="right" >
+ <img src="{% static 'assets/img/agents/success.jpeg'%}" class="img-responsive center-block  w-75 " alt="">
+        <br>
+    <h2 class="text-center">Retention</h2>
+        <br>
+
+    <div class="text-center">We work hard to provide the best option for you. </div>
+        <br>
+    <div class="text-center">We pride ourselves of high retention, and work hard to provide clients
+            extremely competitive rates, and a PEO that matches their needs. </div>
+        <br>
+    <div class="text-center">It is important to match the right PEO with the right risk. We continue
+                to follow up with the client post bind, and communicate with
+                                    you timely. </div>
+        <br>
+    <div class="text-center">We enjoy having the client feel we are the left hand and you're the right
+                                        hand. </div>
+        <br>
+    <div class="text-center">We focus on WC, payroll, and benefits only. We do not shop your other lines
+                                and protect them for you. </div>
+ </div>
+    <div class="right2"></div>
+    </div>
+
     <br>
     <br>
     <br>
@@ -37,4 +106,38 @@
 
 
 </div>
+
+ <style>
+        .column {
+          width: 15%;
+          float: left;
+          padding: 5px;
+        }
+
+        .right {
+          width: 35%;
+            padding:10px
+        }
+
+        .right2{
+            width: 15%;
+            float:right;
+            padding:5px;
+        }
+
+        .left {
+          width: 35%;
+            padding:1px
+        }
+
+   .center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+}
+    </style>
+
 {% endblock %}
