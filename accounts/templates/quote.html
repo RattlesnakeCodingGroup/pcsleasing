@@ -1,47 +1,147 @@
 {% extends 'index.html' %}
+{% block masthead %}
+
+{% endblock %}
 {% load crispy_forms_tags%}
 {% block content %}
-<div class="container">
-<h1>Fill Inquiry Below</h1>
-       <form method="POST"  >
+     <style>
+        .column {
+          width: 30%;
+          float: left;
+          padding: 5px;
+        }
+
+        .right {
+          width: 20%;
+            padding:10px
+        }
+
+        .right2{
+            width: 30%;
+            float:right;
+            padding:5px;
+        }
+
+        .left {
+          width: 20%;
+            padding:1px
+        }
+
+   .center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+}
+    </style>
+    <br><br><br><br><br><br><br>
+    <h1 class=" text-center">Approved Quotes in as Little as 24 Hours</h1>
+    <section>
+
+<div class="row">
+    <div class="column "></div>
+    <div class="right" >
+        <div class="text-center">
+        <h2> Easy Work Comp Solutions  </h2>
+            <br><br>
+            <div>419 W Platt St. Tampa, Fl 33606 </div>
+            <br><br>
+            <a href="tel:8137481230" class="text-info">(813) 748-1230</a>
+
+    </div>
+    </div>
+
+    <div class="left">
+        <div class="text-center">
+    <h1>Hours</h1>
+        <br><br>
+        <div>Mon 08:00 am – 07:00 pm</div>
+        <div>Tue 08:00 am – 07:00 pm</div>
+        <div>Wed 08:00 am – 07:00 pm</div>
+        <div>Thu 08:00 am – 07:00 pm</div>
+        <div>Fri 08:00 am – 07:00 pm</div>
+        <div>Sat 08:00 am – 07:00 pm</div>
+        <div>Sun 08:00 am – 07:00 pm</div>
+        <div>We make hard-to-place workers' comp EASY!</div>
+</div>
+    </div>
+
+    <div class="right2"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    <section class="page-section bg-blue">
+  <div class="container">
+    <div class="divider-custom divider-dark">
+        <div class="divider-custom-line"></div>
+        <div class="text-center text-white"><h2>Request Free Quote</h2></div>
+        <div class="divider-custom-line"></div>
+    </div>
+       <form method="POST" class="form-group"  >
                     {% csrf_token %}
 {#                    <div class="row align-items-stretch mb-5">#}
 {#                        <div class="col-md-6">#}
-                            <div class="form-group">
-                                {{ form.contact_person }}
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                {{ form.company_name }}
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                {{ form.operations }}
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                {{ form.phone }}
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                {{ form.email}}
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                {{ form.num_employee }}
-                                <p class="help-block text-danger"></p>
-                            </div>
+
+                                {{ form.contact_person|as_crispy_field }}
+
+
+
+                                {{ form.company_name|as_crispy_field }}
+
+
+
+                                {{ form.operations|as_crispy_field }}
+
+
+
+                                {{ form.phone|as_crispy_field }}
+
+
+
+                                {{ form.email|as_crispy_field}}
+
+
+
+                                {{ form.num_employee|as_crispy_field }}
+
+
 {#                        </div>#}
 {#                        <div class="col-md-6">#}
-                            <div class="form-group form-group-textarea mb-md-0">
-                                {{ form.payroll}}
-                                <p class="help-block text-danger"></p>
-                            </div>
+
+                                {{ form.payroll|as_crispy_field}}
+
+
 {#                        </div>#}
 {#                    </div>#}
                     <div class="text-center">
                         <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">CONTACT US</button>
+                        <button class="btn btn-light btn-xl text-uppercase" id="sendMessageButton" type="submit">CONTACT US</button>
                     </div>
                 </form>
         <br>

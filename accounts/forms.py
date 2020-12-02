@@ -27,6 +27,7 @@ class AgentForm(forms.ModelForm):
     phone = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
     message = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Message'}))
     resume = forms.Field(label=' ', widget=forms.FileInput(attrs={'placeholder': 'Resume'}), required=True)
+
     class Meta:
         model = Agents
         labels = {
@@ -38,9 +39,19 @@ class AgentForm(forms.ModelForm):
             # 'resume': 'Resume'
         }
         fields = ('__all__')
+
+
 class QuoteForm(forms.ModelForm):
+    contact_person = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Contact Person'}), required=True)
+    email = forms.EmailField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Email'}), required=True)
+    operations = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Brief Description of Operations:'}), required=True)
+    phone = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}), required=True)
+    num_employee = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': '# of Employees:'}), required=True)
+    payroll = forms.Field(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Estimated Annual Payroll'}), required=True)
+    company_name=  forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Company Name'}), required=True)
+
     class Meta:
-        model= Quote
+        model = Quote
         fields = '__all__'
         labels = {
             'contact_person': "Contact Person:*",
@@ -50,4 +61,3 @@ class QuoteForm(forms.ModelForm):
             'num_employee': "# of Employees:*",
             'payroll': 'Estimated Annual Payroll:*'
         }
-

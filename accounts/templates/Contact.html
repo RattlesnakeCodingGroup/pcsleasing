@@ -1,10 +1,21 @@
 {% extends 'index.html' %}
+{% block masthead %}
+
+{% endblock %}
 {% load crispy_forms_tags%}
 {% block content %}
-<div class="container">
-<br>
-<h2>Contact Us</h2>
+
+
+<br><br><br><br><br><br>
+    <div class="row bg-blue no-gutters " style="vertical-align: middle">
+  <div class="divider-custom divider-dark">
+        <div class="divider-custom-line"></div>
+        <div class="text-center text-white"><h2>Contact Us</h2></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    </div>
     <br>
+<div class="container">
        <form method="POST"  >
                     {% csrf_token %}
 {#                    <div class="row align-items-stretch mb-5">#}

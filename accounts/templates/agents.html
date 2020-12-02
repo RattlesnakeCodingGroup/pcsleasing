@@ -98,9 +98,24 @@
                 {{ form.contact|as_crispy_field}}
                 {{ form.phone|as_crispy_field }}
                 {{ form.message|as_crispy_field }}
-                <p class="text-white">Upload Resume:</p>
-                <input class="text-white" type="file"  name="resume"/>
-                <p class="help-block text-white"></p>
+                <p class="text-white"></p>
+                <input class="text-white" type="file" id="resume" name="resume" style="display:none;"/>
+                <label for="resume" style='
+                background-color:white; /* Green */
+                border: 200px #1d2124;
+                border-radius:5px ;
+                color: #737b83;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                font-weight:700;
+                cursor:pointer;
+                 '
+                    > Upload Resume </label>
+
             </div>
             <div class="text-center">
                 <button class="btn btn-light btn-xl text-uppercase" id="sendMessageButton" type="submit">Submit</button>
