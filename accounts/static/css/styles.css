@@ -3960,6 +3960,7 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  padding-right: 45rem;
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -10018,12 +10019,12 @@ p {
   }
 }
 ::-moz-selection {
-  background: #fed136;
+  background: #0158b0;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fed136;
+  background: #9cc2ec;
   text-shadow: none;
 }
 
@@ -10571,3 +10572,38 @@ p.help-block {
   color: #535353 !important;
 }
 
+.divider-whypeo {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.divider-whypeo .divider-custom-line-whypeo {
+  width: 100%;
+  max-width: 17rem;
+  height: 0.25rem;
+  background-color: #0066cc;
+  border-radius: 1rem;
+  border-color: #2c3e50 !important;
+}
+.divider-whypeo .divider-custom-line-whypeo:first-child {
+  margin-right: 1rem;
+}
+.divider-whypeo .divider-custom-line-whypeo:last-child {
+  margin-left: 1rem;
+}
+.divider-whypeo .divider-custom-icon1 {
+  color: #2c3e50 !important;
+  font-size: 2rem;
+}
+.divider-custom.divider-dark1 .divider-custom-line-whypeo {
+  background-color: #0066cc;
+}
+.divider-custom.divider-dark1 .divider-custom-icon1 {
+  color: #535353 !important;
+}
+
+.whypeo{
+  height: 50%;
+}

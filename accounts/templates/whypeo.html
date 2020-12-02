@@ -5,17 +5,26 @@
 {% endblock %}
 {% load crispy_forms_tags%}
 {% block content %}
-<br><br><br>
-<br>
-<br>
-<div class="row">
-<div class="right">
-    <h1 style="color:blue">Why use a PEO?</h1>
-    <br>
-    <br>
-    <h2>Workers' Compensation Coverage</h2>
+<div class="page-section">
 
-    <h3>-Improve Cash Flow </h3>
+
+<div class="container">
+
+<div class="row align-items-stretch md-5">
+
+<div class="col-md-6">
+    <br>
+    <div class="textarea md-0">
+        <br>
+        <div class="divider-whypeo divider-custom-line-whypeo">
+        <h3 style="color:blue">Why use a PEO?</h3>
+        <div class="divider-custom-line-whypeo"></div>
+        </div>
+
+
+    <h4>Workers' Compensation Coverage</h4>
+
+    <h5>-Improve Cash Flow </h5>
     <ul>
     <li>NO annual audits</li>
     <li>NO premium down payments</li>
@@ -23,7 +32,7 @@
     <li>Pay-As-You-Go coverage </li>
     </ul>
 
-    <h3>-Reduced Risk</h3>
+    <h5>-Reduced Risk</h5>
 <ul>
     <li>Bring your MOD back down to 1.0</li>
     <li>Work Comp claims management</li>
@@ -32,65 +41,36 @@
 
 
 
-<h3>-Quick Turnaround (as little as 24 hours)</h3>
+<h4>-Quick Turnaround (as little as 24 hours)</h4>
 <ul>
     <li>Get coverage bound</li>
     <li>Get COIs (certificate of insurance) </li>
 </ul>
-<h2>Focus on your business, not your paperwork. Increase your profitability</h2>
-    <br>
+<h4>Focus on your business, not your paperwork. Increase your profitability</h4>
+
 <div>Focus on what you do best, take charge of your daily operations and growth</div>
     <br>
 <div>Run your day to day operations, the PEO handles your payroll processing, provides you pay-as-you-go workers' compensation coverage, administers your benefits, and saves you time, money, and headaches. </div>
-<br><br>
-    <h2>Compliance, Payroll and HR Support</h2>
-    <br>
+<br>
+    <h4>Compliance, Payroll and HR Support</h4>
+
 <ul>
     <li> Remain compliant as laws, rules, and regulations constantly change </li>
     <li> PEO files your state and federal payroll taxes</li>
     <li>PEO issues W-2's at the end of the year</li>
     <li>Receive support and subject matter expert access and solutions to Human Resources related issues such as terminations, harassment, and state unemployment claims</li>
 </ul>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group">
+<br>
+<img src="{% static 'assets/img/hardhat.jpg' %}"  class="img-responsive whypeo" alt="">
 </div>
 
-<div class="left">
-    <br><br>
-<img src="{% static 'assets/img/hardhat.jpg' %}"  alt="">
 </div>
-
 </div>
-
-   <style>
-        .column {
-          width: 30%;
-          float: left;
-          padding: 5px;
-        }
-
-        .right {
-          width: 40%;
-            padding:500px
-        }
-
-        .right2{
-            width: 20%;
-
-            padding:5px;
-        }
-
-        .left {
-          width: 60%;
-            padding:1px
-        }
-
-   .center-block {
-   margin-left:auto;
-   margin-right:auto;
-   display:block;
-}
-
-
-}
-    </style>
-
+</div>
+</div>
+</section>
 {% endblock %}
