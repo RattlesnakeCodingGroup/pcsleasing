@@ -6,7 +6,7 @@ from accounts.models import Contact, Agents, Quote
 class ContactForm(forms.Form):
     name = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Name'}))
     email = forms.EmailField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Email'}))
-    phone = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
+    phone = forms.CharField(label=' ', blank=True, widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
     inquiry = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Message'}))
 
     # class Meta:
@@ -23,7 +23,7 @@ class ContactForm(forms.Form):
 class AgentForm(forms.ModelForm):
     agency = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Agency Name'}))
     email = forms.EmailField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Email'}))
-    contact = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Contact'}))
+    contact = forms.CharField(label=' ', blank=True, widget=forms.TextInput(attrs={'placeholder': 'Contact'}))
     phone = forms.CharField(label=' ', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
     message = forms.CharField(label=' ', widget=forms.Textarea(attrs={'placeholder': 'Message'}))
     resume = forms.Field(label=' ', widget=forms.FileInput(attrs={'placeholder': 'Resume'}), required=True)
