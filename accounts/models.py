@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from phone_field import PhoneField
+
 
 
 class Contact(models.Model):

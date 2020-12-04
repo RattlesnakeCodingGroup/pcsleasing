@@ -1,9 +1,345 @@
-<!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8">
-    <title>you bitch</title>
-<body>
+{% extends 'index.html' %}
+{% load static %}
+{% load crispy_forms_tags%}
 
-</body>
-</html>
-<div>slut</div>
+{% block masthead %}
+
+{% endblock %}
+{% block content %}
+<section class="page-section">
+    <br>
+    <br>
+     <div class="divider-custom1 divider-dark1">
+        <div class="divider-custom-line1"></div>
+        <div class="text-center "><h2 >We Specialize in... YOU!</h2></div>
+        <div class="divider-custom-line1"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+{#left column#}
+    <div class="row justify-content-md-center">
+    <div class="column "></div>
+
+    <div class="left">
+        <div >
+
+        <img    src="{% static 'assets/img/agents/services1.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+</div>
+
+
+{#   right col #}
+
+    <div class="right" >
+    <h2 class="text-center">Businesses With 1 to 49 Employees</h2>
+        <br>
+
+    <div class="text-center">*New business/ No prior coverage - OK </div>
+        <br>
+    <div class="text-center">*Non- Renewals/ Gap in coverage- OK </div>
+        <br>
+    <div class="text-center">*Height Exposures over 2 stories- OK </div>
+        <br>
+    <div class="text-center">*Up to 100% sub exposure- OK </div>
+        <br>
+    <div class="text-center">*Prior claims/ High MOD- OK </div>
+        <br>
+    <div class="text-center">*Travel exposure- OK </div>
+        <br>
+    <div class="text-center">*Multi state exposure- OK </div>
+        <br>
+    <div class="text-center">*US L&H- OK </div>
+        <br>
+    <div class="text-center">*H2A employees- OK </div>
+        <br>
+    <div class="text-center">*High SUTA (state re-employment) rate- OK </div>
+ </div>
+    <div class="right2"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+{#next section#}
+<section class="page-section bg-light">
+    <br>
+    <br>
+     <div class="divider-custom1 divider-dark1">
+        <div class="divider-custom-line1"></div>
+        <div class="text-center "><h2 >Examples of Industries We Help</h2></div>
+        <div class="divider-custom-line1"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+{#left column#}
+    <div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col-sm">
+
+
+    <div class="text-center">Agriculture</div>
+
+    <div class="text-center">Armed Security Guards </div>
+
+    <div class="text-center">Artisan Contractors </div>
+
+    <div class="text-center">Assisted Living Facilities </div>
+
+    <div class="text-center">Bridge Construction </div>
+
+    <div class="text-center">Concrete (flatwork) </div>
+
+    <div class="text-center">Delivery </div>
+
+    <div class="text-center">Electricians </div>
+
+    <div class="text-center">Excavation </div>
+
+    <div class="text-center">Fencing </div>
+
+    <div class="text-center">Flooring </div>
+
+    <div class="text-center">Framing / Rough Carpentry </div>
+
+    <div class="text-center">General Contractors </div>
+
+    <div class="text-center">Home Health Care </div>
+
+    <div class="text-center">Hotels </div>
+
+    <div class="text-center">HVAC Contractors </div>
+
+    <div class="text-center">Janitorial/Commercial Cleaning </div>
+    </div>
+        <div class="col-sm">
+
+    <div class="text-center">Landscaping </div>
+
+    <div class="text-center">Lawn Care and Maintenance </div>
+
+    <div class="text-center">Live Stock </div>
+
+    <div class="text-center">Masonry </div>
+
+    <div class="text-center">Metal Erection </div>
+
+    <div class="text-center">Moving & Storage </div>
+
+    <div class="text-center">Non-Emergency Medical Transport </div>
+
+    <div class="text-center">Painting </div>
+
+    <div class="text-center">Plumbing </div>
+
+    <div class="text-center">Pool Remodel / Construction </div>
+
+    <div class="text-center">Property Management </div>
+
+    <div class="text-center">Punch outs </div>
+
+    <div class="text-center">Remodeling Contractors </div>
+
+    <div class="text-center">Restaurants </div>
+
+    <div class="text-center">Road Construction </div>
+
+    <div class="text-center">Roofing </div>
+
+    <div class="text-center">Sheet Metal Work </div>
+    </div>
+        <div class="col-sm">
+
+    <div class="text-center">Sprinkler Installation </div>
+
+    <div class="text-center">Stone/Granite/Marble Cutting </div>
+
+    <div class="text-center">Stucco </div>
+
+    <div class="text-center">Tile/ Marble/ Granite Install </div>
+
+    <div class="text-center">Towing </div>
+
+    <div class="text-center">Transportation </div>
+
+    <div class="text-center">Tree Trimming </div>
+
+    <div class="text-center">Trim Carpentry </div>
+
+    <div class="text-center">Trucking (Long and Short Haul)   Warehouse </div>
+
+    <div class="text-center">Welding (Structural and Non) </div>
+
+    <div class="text-center">Window Cleaning </div>
+
+    <div class="text-center">Window Installation </div>
+
+    <div class="text-center">& MANY MORE!! </div>
+
+        <br>
+            <div class="text-center">
+        <div id="success"></div>
+        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Get a Quote</button> {% comment %}TODO link button to quote page{% endcomment %}
+    </div>
+ </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+{#last section, Services & Value#}
+<section class="page-section" >
+    <div class="container">
+    <div class="divider-custom1 divider-dark1">
+        <div class="divider-custom-line1"></div>
+        <div class="text-center"><h2>Services & Value</h2></div>
+        <div class="divider-custom-line1"></div>
+    </div>
+{#left column#}
+    <div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col-sm">
+
+    <h5 class="text-center">Pay as You Go Workers Compensation</h5>
+        <br>
+    <div >
+
+        <img    src="{% static 'assets/img/agents/img2.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+    <div class="text-center">Timely Certificates of Insurance (COIs)
+
+$1M/$1M/$1M Coverage
+
+Multiple A Rated Carriers
+
+Added value to your cash flow with pay as you go. - no more big premium down payments.
+
+One STOP Shop for your PEO Needs</div>
+
+        <br><br>
+<h5 class="text-center">Complementary Review</h5>
+        <br>
+<div >
+
+        <img    src="{% static 'assets/img/agents/img3.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+    <div class="text-center">Give us the opportunity to review your current payroll
+        and workers comp options and we will provide you solid advice at no obligation to you. </div>
+
+
+    </div>
+        <div class="col-sm">
+    <h5 class="text-center">Human Resources Support</h5>
+        <br>
+    <div >
+
+        <img    src="{% static 'assets/img/agents/img4.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+    <div class="text-center">Custom Employee Handbook - Protect yourself.
+
+Stay up to date on changes and how to handle day to day work issues.
+
+Proper employee pay pricing.
+
+Competitive advantage in having subject matter expert support and guidance on your side.
+
+Don't re-invent the wheel, ask for help</div>
+
+        <br>
+<h5 class="text-center">We work for you, not the PEO</h5>
+        <br>
+<div >
+
+        <img    src="{% static 'assets/img/agents/img5.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+    <div class="text-center">We understand the meat and potatoes of your business and match you with the proper PEO for your operations.
+PEO industry is not a one size fits all, being hard to place or high risk, there are key PEOs that we work with.
+We work diligently to provide you the best service, rates, and technology.
+Gain an added layer of support by having us on your side. </div>
+
+
+    </div>
+
+        <div class="col-sm">
+
+    <h5 class="text-center">Payroll Services</h5>
+        <br>
+    <div >
+
+        <img    src="{% static 'assets/img/agents/img7.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+    <div class="text-center">Direct deposit for your Employees.
+
+File your 940/941s, & W2s.
+
+Payroll is only a portion of your payroll.
+
+See and print pay stubs online.
+
+Employee access to online portal.
+
+Live check delivery. </div>
+
+        <br><br><br>
+<h5 class="text-center">Enjoy Your Business</h5>
+        <br>
+<div >
+
+        <img    src="{% static 'assets/img/agents/img8.jpeg' %}" class="img-responsive img-fluid w-75 im-center center-block " alt="">
+    </div>
+    <div class="text-center">We love what we do and it shows.
+So should you, grow your business, and give us the opportunity to match you with the best PEO fit for you.  </div>
+
+
+    </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+
+ <style>
+        .column {
+          width: 15%;
+          float: left;
+          padding: 5px;
+        }
+
+        .right {
+          width: 35%;
+            padding:10px
+        }
+
+        .right2{
+            width: 15%;
+            float:right;
+            padding:5px;
+        }
+
+        .left {
+          width: 35%;
+            padding:1px
+        }
+
+   .center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+   .bg-offwhite{
+  background-color: #e3e3e3
+}
+
+    </style>
+
+{% endblock %}
